@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mobile Zone Login</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: url('https://st2.depositphotos.com/1607243/6054/i/950/depositphotos_60545111-stock-photo-devices-background.jpg') no-repeat center center fixed;
+            background-size: cover;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .login-container {
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            max-width: 400px;
+            width: 100%;
+            z-index: 1; /* Ensure the container is above the background */
+        }
+
+        .login-container h1 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .input-group {
+            margin-bottom: 15px;
+        }
+
+        .input-group label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .input-group input {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+
+        .btn-login {
+            width: 100%;
+            padding: 10px;
+            background-color: #007bff;
+            border: none;
+            color: #fff;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        .btn-login:hover {
+            background-color: #0056b3;
+        }
+
+        .error-message {
+            color: red;
+            text-align: center;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="login-container">
+        <h1>Mobile Zone Login</h1>
+        <div class="input-group">
+            <label for="username">Username</label>
+            <input type="text" id="username" placeholder="Enter your username">
+        </div>
+        <div class="input-group">
+            <label for="password">Password</label>
+            <input type="password" id="password" placeholder="Enter your password">
+        </div>
+        <button id="Login" class="btn-login">
+            login</button>
+        
+        <div id="error-message" class="error-message">
+           
+        </div>
+    </div>
+<script>
+    document.getElementById("Login").addEventListener('click',(e)=>{
+        const name = document.getElementById("username").value;
+        const pass = document.getElementById("password").value;
+        if(name.length <3 ){
+            document.getElementById("error-message").innerText = "Invalid Length";
+            // alert("invalid");
+        }
+        else
+        {
+            window.location.href = "index.html";
+        }
+    })
+</script>
+
+
+</body>
+</html>
